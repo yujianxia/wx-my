@@ -1,0 +1,62 @@
+
+<style type="text/css">
+	#infoBoxForm>div {
+		margin-top: 10px;
+	}
+</style>
+
+				
+<!--查询面板-->
+			<div style="position: absolute;top: 36px;left: 279px;z-index: 3;">
+				用户名：<input type="text" class="easyui-textbox " id="searchAcc" style="width: 200px;"/> 
+				电话： <input type="text" class="easyui-textbox " id="searchTel " style="width: 200px;"/> 
+				<button id="searchBtn">查询</button>
+				<button id="clearBtn">清空</button>
+			</div>
+
+		
+ <!--创建的表格-->
+				<table id="mainTable"></table>
+
+
+
+				<!-- 增加使用的弹框 -->
+				<div style="width: 500px;height: 300px;" id="infoBox" title="增加">
+					
+					<form id="infoBoxForm" method="POST">
+						<div>
+							<label for="accId">用户名:</label>
+                            <input id="accId" validtype="ACC" class="easyui-textbox easyui-validatebox"  style="width:200px" name="user" data-options="required:true" />
+
+						</div>
+					
+						<div>
+							<label for="pwdId">电&nbsp;话:</label>
+							<input id="pwdId" validtype="TEL" class="easyui-textbox easyui-validatebox" style="width:200px;height:28px;padding:10px" name="tel" data-options="required:true"  />
+						</div>
+						<div>
+							<label for="rpwdId">密&nbsp;码:</label>
+							<input id="rpwdId" validtype="PWD" class="easyui-passwordbox easyui-validatebox" style="width:200px;height:28px;padding:10px" name="pwd" data-options="required:true"  />
+						</div>
+
+						<div>
+							<label for="rpwd">确认密码:</label>
+							<input id="rpwd" name="rpwd" class="easyui-validatebox easyui-passwordbox" required="required" validType="equals['#pwd']" data-options="required:true"  style="width:200px;height:28px;padding:10px" />
+							
+							
+
+						</div>
+
+						<div>
+							<label for="pwdId">邮&nbsp;箱:</label>
+							<input id="pwdId" validtype="EMAIL" class="easyui-textbox easyui-validatebox"  style="width:200px;height:28px;padding:10px" name="email" data-options="required:true"  />
+						</div>
+
+						<div>
+							<label for="accId">出生日期:</label>
+							<input id="accId" validtype="BIRTH" class="easyui-textbox easyui-validatebox" style="width:200px;height:28px;padding:10px" name="birth" data-options="required:true" />
+						</div>
+					</form>									
+				</div>
+                
+

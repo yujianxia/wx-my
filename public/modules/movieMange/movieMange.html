@@ -1,0 +1,68 @@
+<style type="text/css">
+	#addPal{
+		display: none;
+		padding: 10px 60px;
+	}
+
+	form{
+		text-align: right;
+	}
+
+	form .pbox input{
+		margin-left: 30px;
+		margin-right: 50px;
+	}
+
+	form .pbtn1 {
+		width: 100px;
+		margin-right: 100px;
+	}
+
+	form .pbtn2 {
+	   width: 126px;
+	   margin-right: 100px;
+	}
+	form #addt{
+		margin-right: 210px;
+	}
+
+</style>
+<!-- 搜索框 -->
+<div>
+	<input id="smInput" style="width: 400px"></input> 
+	<div id="smSelect" style="width:40px"> 
+		<div data-options="name:'name'">电影名</div> 
+		<div data-options="name:'type'">类型</div> 
+	</div>
+</div>
+		
+
+<!-- table数据	 -->
+<table border="1" id="movieMag">
+</table>
+
+
+<!-- 弹出的增加电影的框 -->
+<div id="addPal">
+ <form id="addForm" method="post" enctype="multipart/form-data"> 
+   	<p class="pbox">中文名:<input type="text" name="name"></p>
+ 	<p class="pbox">英文名:<input type="text" name="eName"></p>
+ 	<p class="pbox">年代:<input type="text" name="age"></p>
+ 	<p class="pbox">时长:<input type="text" name="time"></p>
+ 	<p class="pbox">上映时间:<input type="text" name="release"></p>
+ 	<p class="pbox">上映地区:<input type="text" name="upArea"></p>
+ 	<p class="pbox">票房:<input type="text" name="money"></p>
+ 	<p class="pbox">剧情简介:<input type="text" name="desc"></p>
+ 	<p class="pbox">类型:<input type="text" name="type"></p>
+ 	<p class="pbox">区域:<input type="text" name="area"></p>
+ 	<p><button type="button" id="selSimg">选择首页图片</button><input type="text" class="pbtn1"></p>
+    <input type="file" class="pbtn11" style="display: none" name="file">
+  </form>
+   <form id="addFormTJ" method="post" enctype="multipart/form-data"> 
+ 	<p><button type="button" id="selAimg">选择图集</button><input type="text" class="pbtn2"></p>
+    <input type="file" class="pbtn22" style="display: none" name="file">
+    <button id="addt" type="button">添加图集</button>
+  </form>
+
+
+</div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>管理</title>
+		<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="themes/icon.css">
+		<script type="text/javascript" src="js/sea.js"></script>
+		<script type="text/javascript">
+		window.onload=function(){
+			seajs.config({
+				base: '.',
+				alias: {
+					jquery: "js/jquery.seajs.min.js", //jquery
+					easyui: "js/jquery.easyui.seajs.min.js", //easyui
+			        user: 'modules/userManage/userManage.html',//用户管理
+			        addressMange: "modules/addressMange/addressMange.js", //院线管理
+					hotFilms: "modules/hotFilms/hotFilms.js",
+					infoMes: "modules/infoMes/infoMes.js",
+					movieMange: "modules/movieMange/movieMange.js"
+
+				}
+			});
+			seajs.use("js/manager.js");
+		}
+		</script>
+		<style type="text/css">
+			body {
+				/*background: url(images/bacimg.png) no-repeat;*/
+				padding: 0;
+				margin: 0;
+			}
+			
+			h1 {
+				margin-bottom: -4px;
+				font-size: 40px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>管理界面</h1>
+		<div id="movielayout" class="easyui-layout" style="width:100%;height:800px;">
+			<div data-options="region:'west',title:'功能列表',split:true" style="width:200px;" id="layoutLeft">
+		<ul id="tt" class="easyui-tree">
+			<li id="user">用户管理</li>
+			<li id="infoMes">资讯管理</li>
+			<li id="movieMange">电影管理</li>
+			<li id="addressMange ">院线管理</li>   
+    		<li id="maMatch ">电影院线匹配管理</li>   
+    		<li id="movieHot ">热映电影管理</li>   
+    		<li id="movieSoon ">即将上映管理</li>   
+    		<li id="movieHotPlay ">热播电影管理</li>   
+		</ul> 
+		
+    </div>   
+      
+     
+     <div data-options="region: 'center',title: '' " id="layoutRight " class="easyui-tabs ">
+    	
+    </div>   
+
+</div>
+
+ 
+</body>
+</html>

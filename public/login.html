@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="css/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<script type="text/javascript" src="js/sea.js"></script>
+	<script type="text/javascript">
+		seajs.config({
+			base:'.',
+			alias:{
+				easyui:"js/jquery.easyui.seajs.min.js",  //easyui seajs版
+				jquery:"js/jquery.seajs.min.js",	//jquery seajs版
+			}
+		});
+		seajs.use('js/login');	//入口
+	</script>
+	<style type="text/css">
+		#loginDiv{
+			width: 400px;
+			height: 180px;
+			border: 1px solid black;
+			margin: auto;
+			position: relative;
+		}
+		#accP,#pwdP{
+			text-align: center;
+		}
+		#loginBut{
+			margin-left: 100px;
+			margin-right: 70px;
+		}
+		#emptyBut{
+			position: absolute;
+		    left: 228px;
+			top: 98px;
+		}
+	</style>
+</head>
+<body>
+	<div id="loginDiv">
+		<form action="/user_login" method="post" onsubmit="return checkForm()">
+			
+				<p id="accP">
+					用户名：
+					<input class="easyui-textbox" data-options="iconCls:'icon-search'" prompt="请输入账号" id="acc">
+					<label id="userLabel"></label>
+				</p>
+
+				<p id="pwdP">
+					密&nbsp;&nbsp;&nbsp;码：
+					<input class="easyui-passwordbox" prompt="请输入密码" iconWidth="28" id="pwd"> 
+					<label id="pwdLabel"></label>
+				</p>
+
+				<button id="loginBut">登录</button>
+				
+		</form>
+
+		<button id="emptyBut">清空</button>
+		
+	</div>
+</body>
+</html>
